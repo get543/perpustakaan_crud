@@ -13,9 +13,14 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.min.js"></script>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
-    <!-- datatables -->
+
+    <!-- jQuery (required for DataTables) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- DataTables CSS and JS -->
     <link rel="stylesheet" href="datatables/datatables.css">
     <script type="text/javascript" src="datatables/datatables.js"></script>
 
@@ -75,7 +80,7 @@
                         <td><?php echo $result['tahun_terbit']; ?></td>
                         <td><?php echo $result['genre']; ?></td>
                         <td><img src="img/<?php echo $result['foto_buku']; ?>" style="width: 75px;"></td>
-                        <td>3</td>
+                        <td><?php echo $result['jumlah']; ?></td>
                         <td>
                             <!-- Tombol untuk mengubah data buku -->
                             <a href="kelola.php?ubah=<?php echo $result['id_buku']; ?>" type="button" class="btn btn-success">
